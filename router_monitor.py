@@ -1,3 +1,4 @@
+# python -u router_monitor.py >> router_log.txt 2>&1 &
 import schedule, time, os, sys, urllib2, base64
 from datetime import datetime
 def check_connection():
@@ -15,7 +16,6 @@ def restart_router():
 	request.add_header("Authorization", "Basic %s" % base)
 	result = urllib2.urlopen(request)
 
-print sys.version
 print "starting"
 check_connection()
 schedule.every(1).minutes.do(check_connection)
