@@ -1,7 +1,7 @@
-my_list = [];
+myList = [];
 for i in range(3):
-	print 'Enter a number:'
-	my_list.append(input())
+	print('Enter a number:')
+	myList.append(input())
 
-my_list.sort()
-print my_list
+myList.sort()
+print(','.join(myList))
